@@ -52,6 +52,81 @@ nav a:hover {
   color: #3b82f6;
 }
 
+.hero {
+  background: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.65)),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80")
+      center/cover no-repeat;
+  color: white;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  padding: 60px 0;
+}
+
+.hero-text {
+  max-width: 650px;
+}
+
+.tag {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  color: #93c5fd;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background: #0ea5e9;
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #0284c7;
+}
+
+.section {
+  padding: 70px 0;
+}
+
+.about,
+.contact {
+  background: white;
+}
+
+.booking {
+  background: #eaf4ff;
+}
+
+.rentals {
+  background: white;
+}
+
+.rentals h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.2rem;
+}
+
 //.footer-links a:hover {
  // color: #030203;
 //}
