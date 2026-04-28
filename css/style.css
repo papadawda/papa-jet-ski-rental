@@ -55,3 +55,31 @@ nav a:hover {
 //.footer-links a:hover {
  // color: #030203;
 //}
+
+
+// our premium section
+.premium-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.premium-card {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+}
+
+.premium-card .price {
+  font-size: 2rem;
+  color: #0ea5e9;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.premium-card ul {
+  list-style: none;
+  text-align: left;
+}
