@@ -20,8 +20,65 @@
     </div>
   </header>
 
+  <section class="contact section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <p>Have questions about our jet ski rentals? Want to book for a special event? We'd love to hear from you!</p>
 
+          <div class="contact-details">
+            <p><strong>Email:</strong> papajetskirentals@example.com</p>
+            <p><strong>Phone:</strong> (608) 555-1234</p>
+            <p><strong>Location:</strong> 1102 Woodward Dr, Madison, WI 53704</p>
+            <p><strong>Hours:</strong> 9 AM - 6 PM Daily (May - September)</p>
+          </div>
+        </div>
 
+        <div class="contact-form-box">
+          <h3>Send us a Message</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="contactName">Full Name</label>
+              <input type="text" id="contactName" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contactEmail">Email</label>
+              <input type="email" id="contactEmail" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contactPhone">Phone Number</label>
+              <input type="tel" id="contactPhone" name="phone" />
+            </div>
+
+            <div class="form-group">
+              <label for="contactSubject">Subject</label>
+              <select id="contactSubject" name="subject" required>
+                <option value="">Select a subject</option>
+                <option value="booking">Booking Inquiry</option>
+                <option value="pricing">Pricing Questions</option>
+                <option value="availability">Availability Check</option>
+                <option value="group">Group Rentals</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" name="message" rows="5" required placeholder="Tell us how we can help you..."></textarea>
+            </div>
+
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+
+          <p id="contactMessage" class="confirmation-message"></p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer>
   <div class="container">
