@@ -20,6 +20,63 @@
     </div>
   </header>
 
+  <section class="booking section">
+    <div class="container booking-grid">
+      <div class="booking-form-box">
+        <h2>Book Your Jet Ski</h2>
+        <form id="bookingForm">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" required />
+
+          <label for="date">Rental Date</label>
+          <input type="date" id="date" required />
+
+          <label for="time">Rental Time</label>
+          <input type="time" id="time" required />
+
+          <label for="package">Select Package</label>
+          <select id="package" required>
+            <option value="95" data-name="1 Hour Rental">1 Hour Rental - $95</option>
+            <option value="190" data-name="2 Hour Rental">2 Hour Rental - $190</option>
+            <option value="285" data-name="3 Hour Rental">3 Hour Rental - $285</option>
+          </select>
+
+          <label for="skis">Number of Jet Skis</label>
+          <select id="skis" required>
+            <option value="1">1 Jet Ski</option>
+            <option value="2">2 Jet Skis</option>
+            <option value="3">3 Jet Skis</option>
+            <option value="4">4 Jet Skis</option>
+          </select>
+
+          <div class="summary">
+            <h3>Booking Summary</h3>
+            <p>Package: <span id="summaryPackage">1 Hour Rental</span></p>
+            <p>Jet Skis: <span id="summarySkis">1</span></p>
+            <p>Discount: $<span id="discountAmount">0.00</span></p>
+            <p>Total: $<span id="totalPrice">100.23</span></p>
+          </div>
+
+          <div class="discount-section">
+            <label for="discountCode">Discount Code (Optional)</label>
+            <input type="text" id="discountCode" placeholder="Enter discount code" />
+            <button type="button" id="applyDiscount" class="btn btn-secondary">Apply Code</button>
+            <p id="discountMessage" class="discount-message"></p>
+          </div>
+
+          <button type="submit" class="btn">Book & Pay</button>
+        </form>
+
+        <p id="confirmationMessage" class="confirmation-message"></p>
+      </div>
+    </div>
+  </section>
 
 
 
