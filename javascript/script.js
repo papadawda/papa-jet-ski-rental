@@ -36,3 +36,30 @@ skisSelect.addEventListener("change", updateSummary);
 
 // Calculate the summary once when the page first loads
 updateSummary();
+
+
+
+const discountInput = document.getElementById("discountCode");
+const applyDiscountButton = document.getElementById("applyDiscount");
+const discountMessage = document.getElementById("discountMessage");
+const discountAmount = document.getElementById("discountAmount");
+
+let discount = 0;
+
+function applyDiscount() {
+  const code = discountInput.value.trim().toUpperCase();
+
+  if (code === "PAPA10") {
+    discount = 10;
+    discountMessage.textContent = "Discount code applied successfully!";
+    discountMessage.classList.remove("error");
+  } else {
+    discount = 0;
+    discountMessage.textContent = "Invalid discount code.";
+    discountMessage.classList.add("error");
+  }
+
+  updateSummary();
+}
+
+applyDiscountButton.addEventListener("click", applyDiscount);
