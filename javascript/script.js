@@ -4,6 +4,12 @@ const skisSelect = document.getElementById("skis");
 const summaryPackage = document.getElementById("summaryPackage");
 const summarySkis = document.getElementById("summarySkis");
 const totalPrice = document.getElementById("totalPrice");
+const discountInput = document.getElementById("discountCode");
+const applyDiscountButton = document.getElementById("applyDiscount");
+const discountMessage = document.getElementById("discountMessage");
+const discountAmount = document.getElementById("discountAmount");
+
+let discount = 0;
 
 // This function updates the booking summary shown to the user
 function updateSummary() {
@@ -22,10 +28,14 @@ function updateSummary() {
   // Calculate the total cost as price per package times the number of skis
   const total = packagePrice * numberOfSkis;
 
+  // Apply any active discount amount to the total
+  const finalTotal = Math.max(total - discount, 0);
+
   // Update the summary fields on the page
   summaryPackage.textContent = packageName;
   summarySkis.textContent = numberOfSkis;
-  totalPrice.textContent = total.toFixed(2);
+  discountAmount.textContent = discount.toFixed(2);
+  totalPrice.textContent = finalTotal.toFixed(2);
 }
 
 // When the selected package changes, recalculate the summary
@@ -39,27 +49,23 @@ updateSummary();
 
 
 
-const discountInput = document.getElementById("discountCode");
-const applyDiscountButton = document.getElementById("applyDiscount");
-const discountMessage = document.getElementById("discountMessage");
-const discountAmount = document.getElementById("discountAmount");
-
-let discount = 0;
-
 function applyDiscount() {
+  // Read the entered discount code and normalize it to uppercase
   const code = discountInput.value.trim().toUpperCase();
 
   if (code === "PAPA10") {
-    discount = 10;
+    discount = 10; // apply a $10 discount
     discountMessage.textContent = "Discount code applied successfully!";
     discountMessage.classList.remove("error");
   } else {
-    discount = 0;
+    discount = 0; // reset discount when the code is invalid
     discountMessage.textContent = "Invalid discount code.";
     discountMessage.classList.add("error");
   }
 
+  // Recalculate the summary after updating the discount value
   updateSummary();
 }
 
+// When the discount button is clicked, verify the code and update the summary
 applyDiscountButton.addEventListener("click", applyDiscount);
